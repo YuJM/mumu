@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve -o",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,10 +21,14 @@
     "@angular/router": "~9.0.0-rc.12",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "@angular/cdk": "^9.0.0-rc.9"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.900.0-rc.12",
+    "@angular-devkit/core": "^9.0.0-rc.12",
+    "@angular-devkit/schematics": "^9.0.0-rc.12",
+    "@angular/bazel": "^9.0.0-rc.13",
     "@angular/cli": "~9.0.0-rc.12",
     "@angular/compiler-cli": "~9.0.0-rc.12",
     "@angular/language-service": "~9.0.0-rc.12",
@@ -42,6 +46,17 @@
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
-    "typescript": "~3.7.4"
+    "typescript": "~3.7.4",
+    "rollup": "^1.21.4",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sourcemaps": "0.5.0",
+    "@bazel/bazel": "2.0.0",
+    "@bazel/ibazel": "^0.11.1",
+    "@bazel/buildifier": "^0.29.0",
+    "@bazel/typescript": "^1.2.4",
+    "@bazel/rollup": "^1.2.4",
+    "semver": "^7.1.2",
+    "scss-bundle": "3.0.2"
   }
 }
