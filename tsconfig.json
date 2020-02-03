@@ -1,11 +1,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -14,10 +14,17 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@emmental/ui/*": ["packages/ui/*"]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
