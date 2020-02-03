@@ -61,6 +61,8 @@
     "@bazel/typescript": "^1.2.4",
     "@bazel/rollup": "^1.2.4",
     "semver": "^7.1.2",
-    "scss-bundle": "3.0.2"
+    "scss-bundle": "3.0.2",
+    "css-loader": "^3.4.2",
+    "sass-loader": "^8.0.2"
   }
 }
