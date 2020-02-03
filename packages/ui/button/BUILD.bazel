@@ -1,4 +1,4 @@
-package(default_visibility = ["//visibility:public"])
+#package(default_visibility = ["//visibility:public"])
 
 load("@io_bazel_rules_sass//:defs.bzl",  "sass_binary", "sass_library")
 
@@ -10,7 +10,7 @@ sass_library(
 
 sass_binary(
     name =  "button_scss",
-    src = "pa-button.components.scss",
+    src = "pa-button.component.scss",
     deps= [ ":button_lib"]
 )
 

@@ -8,7 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook",
+    "ba-run": "bazel build //packages/ui/button:button_scss",
+    "bazel:clean": "bazel clean"
   },
   "private": true,
   "dependencies": {

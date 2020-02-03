@@ -1,2 +1,2 @@
 export * from './button.module';
-export * from './pa-button/pa-button.component';
+export * from './pa-button.component';
