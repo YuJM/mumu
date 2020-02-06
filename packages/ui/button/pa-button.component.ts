@@ -9,7 +9,7 @@ const className = 'pa-button';
   encapsulation: ViewEncapsulation.None,
 })
 export class PaButtonComponent implements OnInit {
-  @Input() text;
+  @Input() text: string;
 
   constructor(private _hostElementRef: ElementRef) {
 

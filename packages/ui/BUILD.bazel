@@ -1,4 +1,5 @@
-#package(default_visibility = ["//visibility:public"])
+package(default_visibility = ["//visibility:public"])
 
 #load("@io_bazel_rules_sass//:defs.bzl",  "sass_binary", "sass_library")
-
+# 이걸 해줘야 tsconfig가 감지 된다.
+exports_files(["tsconfig.json","tsconfig.lib.json"])
