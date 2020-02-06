@@ -50,5 +50,5 @@ ng_package(
     entry_point = ":index.ts",
     entry_point_name = "ui",
     tags = ["release-package"],
-    deps = []
+    deps = [":ui"] + MUMU_TARGETS
 )
