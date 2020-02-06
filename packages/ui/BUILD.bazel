@@ -1,5 +1,25 @@
 package(default_visibility = ["//visibility:public"])
-
+load("@npm_angular_bazel//:index.bzl", "ng_package")
+load("//packages/ui:config.bzl", "MUMU_TARGETS")
+load("//tools:defaults.bzl", "ts_library")
 #load("@io_bazel_rules_sass//:defs.bzl",  "sass_binary", "sass_library")
 # 이걸 해줘야 tsconfig가 감지 된다.
 exports_files(["tsconfig.json","tsconfig.lib.json"])
+
+ts_library(
+    name = "ui",
+    srcs = ["index.ts"],
+    module_name = "@vipa/ui",
+)
+
+
+ng_package(
+    name = "npm_package",
+    srcs = [
+        "package.json",
+    ],
+    entry_point = ":index.ts",
+    entry_point_name = "ui",
+    tags = ["release-package"],
+    deps = MUMU_TARGETS,
+)
