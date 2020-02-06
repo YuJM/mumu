@@ -10,7 +10,7 @@ load("@npm_bazel_typescript//:index.bzl", _ts_library = "ts_library")
 #load("//:rollup-globals.bzl", "ROLLUP_GLOBALS")
 #load("//tools/markdown-to-html:index.bzl", _markdown_to_html = "markdown_to_html")
 
-_DEFAULT_TSCONFIG_BUILD = "//packages/ui:tsconfig.lib.json"
+_DEFAULT_TSCONFIG_BUILD = "//tools:tsconfig.lib.json"
 _DEFAULT_TSCONFIG_TEST = "//src:tsconfig-test"
 
 # Re-exports to simplify build file load statements

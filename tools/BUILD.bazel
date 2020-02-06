@@ -18,6 +18,9 @@ package(default_visibility = ["//visibility:public"])
 #      }
 #    """,
 #)
+
+exports_files(["tsconfig.lib.json"])
+
 # 이 환경변수값이 필요한거 어디 문서에도 나와있지 않는다. 2020-02-06
 config_setting(
     name = "view_engine_mode",

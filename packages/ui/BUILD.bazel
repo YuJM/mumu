@@ -3,8 +3,36 @@ load("@npm_angular_bazel//:index.bzl", "ng_package")
 load("//packages/ui:config.bzl", "MUMU_TARGETS")
 load("//tools:defaults.bzl", "ts_library")
 #load("@io_bazel_rules_sass//:defs.bzl",  "sass_binary", "sass_library")
-# 이걸 해줘야 tsconfig가 감지 된다.
-exports_files(["tsconfig.json","tsconfig.lib.json"])
+## 이걸 해줘야 tsconfig가 감지 된다.
+#exports_files(["tsconfig.json","tsconfig.lib.json"])
+
+# buildifier: disable=unsorted-dict-items
+ROLLUP_GLOBALS = {
+    # Framework packages.
+        "@angular/animations": "ng.animations",
+        "@angular/common": "ng.common",
+        "@angular/common/http": "ng.common.http",
+        "@angular/common/http/testing": "ng.common.http.testing",
+        "@angular/common/testing": "ng.common.testing",
+        "@angular/core": "ng.core",
+        "@angular/core/testing": "ng.core.testing",
+        "@angular/forms": "ng.forms",
+        "@angular/platform-browser": "ng.platformBrowser",
+        "@angular/platform-browser-dynamic": "ng.platformBrowserDynamic",
+        "@angular/platform-browser-dynamic/testing": "ng.platformBrowserDynamic.testing",
+        "@angular/platform-browser/animations": "ng.platformBrowser.animations",
+        "@angular/platform-server": "ng.platformServer",
+        "@angular/router": "ng.router",
+
+        "@ui/button": "ui.button",
+        # Third-party libraries.
+         "moment": "moment",
+         "protractor": "protractor",
+         "rxjs": "rxjs",
+         "rxjs/operators": "rxjs.operators",
+         "tslib": "tslib",
+
+}
 
 ts_library(
     name = "ui",
@@ -18,8 +46,9 @@ ng_package(
     srcs = [
         "package.json",
     ],
+    globals= ROLLUP_GLOBALS,
     entry_point = ":index.ts",
     entry_point_name = "ui",
     tags = ["release-package"],
-    deps = MUMU_TARGETS,
+    deps = []
 )
