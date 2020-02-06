@@ -22,6 +22,6 @@ package(default_visibility = ["//visibility:public"])
 config_setting(
     name = "view_engine_mode",
     values = {
-        "define": "angular_ivy_enabled=False",
+        "define": "angular_ivy_enabled=True",
     },
 )
