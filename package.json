@@ -70,6 +70,7 @@
     "sass-loader": "^8.0.2",
     "tsickle": "0.38.0",
     "terser": "^4.3.9",
-    "tsutils": "^3.0.0"
+    "tsutils": "^3.0.0",
+    "webpack": "^4.42.0"
   }
 }
