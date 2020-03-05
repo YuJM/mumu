@@ -52,3 +52,5 @@ ng_package(
     tags = ["release-package"],
     deps = ["//packages/ui"] + MUMU_TARGETS
 )
+
+exports_files(["tsconfig.lib.json"])

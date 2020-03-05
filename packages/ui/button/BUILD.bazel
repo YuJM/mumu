@@ -1,10 +1,7 @@
 package(default_visibility = ["//visibility:public"])
 
 load("@io_bazel_rules_sass//:defs.bzl",  "sass_binary", "sass_library")
-load(
-    "//tools:defaults.bzl",
-    "ng_module",
-)
+load("@npm_angular_bazel//:index.bzl", "ng_module")
 
 sass_library(
     name="button_lib",
@@ -23,11 +20,12 @@ ng_module(
         ["**/*.ts"],
         exclude = ["**/*.spec.ts"],
     ),
-#    tsconfig = "//packages/ui/tsconfig.lib.json",
+    tsconfig = "//packages/ui:tsconfig.lib.json",
     assets = [":pa-button.component.css"] + glob(["**/*.html"]),
     module_name = "@vipa/ui/button",
     deps = [
         "@npm//@angular/core",
-        "@npm//@angular/platform-browser"
+        "@npm//@angular/platform-browser",
+        "@npm//@angular/common"
     ],
 )
